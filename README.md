@@ -1,3 +1,3 @@
-o# linux
+# linux
 #
-# This is a preliminary test repositary to develop familiarity with GitHub
+# This is a preliminary test repository to develop familiarity with GitHub
