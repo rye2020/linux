@@ -1,0 +1,17 @@
+#!/bin/bash
+#JRM check CB web pages for not-yet-available
+#working on 10/23/16
+echo Checking for not-yet-available in CB data pages
+echo CBAggregate
+wget -O- -q http://us-covered-bonds.com/cbaggregate/ | sed 's/\/tr>/\/tr>\n/g' | grep --color not-yet-available
+if [ $? != 0 ]; then echo ' No records found'
+fi
+echo CB by Series
+wget -O - -q http://us-covered-bonds.com/cdn-issue-by-series/ | sed 's/\/td>/\/td>\n/g' | grep --color not-yet-available
+if [ $? != 0 ]; then echo ' No records found'
+fi
+echo CB by Year
+wget -O - -q http://us-covered-bonds.com/cdn-bonds-by-year/ | sed 's/\/td>/\/td>\n/g' | grep --color not-yet-available
+if [ $? != 0 ]; then echo ' No records found'
+fi
+echo Finished

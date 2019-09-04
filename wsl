@@ -1,0 +1,6 @@
+#/bin/sh
+## JRM list IP addresses for WSL 2 communications
+ip addr | grep eth0          ## this for listenting to Linux
+cat /etc/resolv.conf | grep nameserver   ## Set DISPLAY=this for Linux GUI
+
+
