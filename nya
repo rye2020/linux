@@ -15,3 +15,5 @@ wget -O - -q http://us-covered-bonds.com/cdn-bonds-by-year/ | sed 's/\/td>/\/td>
 if [ $? != 0 ]; then echo ' No records found'
 fi
 echo Finished
+#JRM end of check web pages
+
